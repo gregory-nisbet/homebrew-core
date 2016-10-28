@@ -14,7 +14,7 @@ class Tcsh < Formula
   end
 
   def install
-    system "./configure", "--prefix=#{prefix}", "--sysconfdir=#{etc}"
+    system "./configure", "--prefix=#{prefix}", "--sysconfdir=#{etc}", "CFLAGS=-DDARWIN"
     system "make", "install"
   end
 
